@@ -1,6 +1,3 @@
-
-
-
 function calcularPrecio() {
 
     var nombre = document.getElementById('nombre').value;
@@ -13,7 +10,6 @@ function calcularPrecio() {
 
 
     var rd;
-    var precioPorKilometro = 150;
     var precioPorDias;
 
     precioPorDias = (numeroAdultos * 100) * dias;
@@ -183,5 +179,25 @@ function calcularPrecio() {
     }
 
     total = precioPorDias + rd;
+
+    precioTotal = total;
+
+    totalString = total.toString();
+
+    var dEstado = nombre + " tu viaje es con destino a " + estado.toUpperCase();
+    var dMenores = "Menores: " + numeroMenores.toString();
+    var dAdultos = "Adultos: " + numeroAdultos.toString();
+
+    console.log(dEstado);
+    console.log(dMenores);
+
+    document.getElementById("detalle-total").innerHTML = "Total: $" + totalString;
+    document.getElementById("detalle-estado").innerHTML = dEstado;
+    document.getElementById("detalle-menores").innerHTML = dMenores;
+    document.getElementById("detalle-adultos").innerHTML = dAdultos;
+    document.getElementById("detalle-text").innerHTML = "DeTaLlEs";
+
+    
+
 
 }
